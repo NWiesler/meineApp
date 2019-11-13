@@ -9,11 +9,16 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+| Hier wird außerdem definiert, wenn für einen Seitenzugriff eine Authentifizierung nötig ist
 */
+
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('products','ProductController')->middleware('auth');
 
 Auth::routes();
 
