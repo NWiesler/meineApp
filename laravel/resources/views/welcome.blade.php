@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>juhuuuuu</title>
+        <title>What's in my fridge</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -13,10 +13,12 @@
         <!-- Styles -->
         <style>
             html, body {
+                /*background-image: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+                background-size:cover;*/
                 background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                color: #58BAC2;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 600;
                 height: 100vh;
                 margin: 0;
             }
@@ -50,9 +52,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #58BAC2;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 18px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -69,7 +71,9 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <!--<a href="{{ url('/home') }}">Home</a> -->
+                        <a href="{{ url('/products') }}">My fridge</a>
+
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -82,19 +86,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    What's in my fridge?
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
             </div>
         </div>
     </body>
