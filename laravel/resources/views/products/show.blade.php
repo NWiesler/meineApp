@@ -18,11 +18,20 @@
                 {{ $product->name }}</p>
             </div>
         </div>
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <p><strong>Details:</strong>
                 {{ $product->detail }}</p>
             </div>
         </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <p><strong>Mindestens haltbar bis:</strong>
+                {{ $product->MHD }}</p>
+            </div>
+        </div>
+
     </div>
 @endsection
