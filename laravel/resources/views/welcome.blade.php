@@ -8,7 +8,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    
+        
+        <!--Bootstrap -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -68,27 +70,29 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <!--<a href="{{ url('/home') }}">Home</a> -->
-                        <a href="{{ url('/products') }}">My fridge</a>
-
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
+            
             <div class="content">
                 <div class="title m-b-md">
                     What's in my fridge?
                 </div>
 
+            @if (Route::has('login'))
+            
+                    @auth
+                    <a type="button" class="btn btn-outline-info" href="{{ url('/products') }}"> Show my fridge </a>
+                    
+                @else
+
+                        @if (Route::has('register'))
+                            <a type="button" class="btn btn-outline-info" href="{{ route('login') }}">Login </a>
+                            <a type="button" class="btn btn-outline-info" href="{{ route('register') }}">Register</a>
+                            <!--<a href="{{ route('register') }}"> Not a member yet? Register now!</a> -->
+                        @endif
+
+                    @endauth
+                
+            @endif
+    
             </div>
         </div>
     </body>
