@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('detail');
-            $table->localtime('MHD');
+            $table->date('MHD');
             $table->timestamps();
         });
     }
