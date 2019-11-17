@@ -79,7 +79,7 @@
             @if (Route::has('login'))
             
                     @auth
-                    <a type="button" class="btn btn-outline-info" href="{{ url('/products') }}"> Show my fridge </a>
+                    <a type="button" class="btn btn-outline-info" href="{{ url('/products') }}">  </a>
                     
                 @else
 
