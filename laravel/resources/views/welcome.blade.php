@@ -17,10 +17,6 @@
             html, body {
                 /*background-image: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
                 background-size:cover;*/
-                background-color: #fff;
-                color: #58BAC2;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 600;
                 height: 100vh;
                 margin: 0;
             }
@@ -51,9 +47,10 @@
 
             .title {
                 font-size: 84px;
+                color: #17a2b8;
             }
 
-            .links > a {
+            /*.links > a {
                 color: #58BAC2;
                 padding: 0 25px;
                 font-size: 18px;
@@ -62,7 +59,7 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
+            */
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -79,7 +76,7 @@
             @if (Route::has('login'))
             
                     @auth
-                    <a type="button" class="btn btn-outline-info" href="{{ url('/products') }}">  </a>
+                    <a type="button" class="btn btn-outline-info" href="{{ url('/products') }}"> Show my fridge </a>
                     
                 @else
 
